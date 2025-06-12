@@ -9,13 +9,16 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Georgia', serif;
   background: #fffaf3;
   color: #2e2e2e;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
 }
-
 
 header {
   background: #7f5539;
@@ -24,7 +27,6 @@ header {
   text-align: center;
   flex-shrink: 0;
 }
-
 
 nav {
   background: #a47148;
@@ -41,8 +43,8 @@ nav a {
 }
 
 section {
+  flex-grow: 1; /* Burayı büyüt */
   padding: 20px;
-  flex: 1; 
   display: none;
   overflow-y: auto;
 }
@@ -51,13 +53,13 @@ section.active {
   display: block;
 }
 
-
 footer {
   background: #7f5539;
   color: white;
   text-align: center;
   padding: 12px;
   flex-shrink: 0;
+}
 }
 
 
