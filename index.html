@@ -4,49 +4,56 @@
     <meta charset="UTF-8" />
     <title>Türk Edebiyatı</title>
     <style>
-        html, body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
-        body {
-          display: flex;
-          flex-direction: column;
-          font-family: 'Georgia', serif;
-          background: #fffaf3;
-          color: #2e2e2e;
-          min-height: 100vh;
-        }
-        header {
-          background: #7f5539;
-          color: white;
-          padding: 20px 0;
-          text-align: center;
-          flex-shrink: 0;
-        }
-        nav {
-          background: #a47148;
-          padding: 12px;
-          text-align: center;
-          flex-shrink: 0;
-        }
-        nav a {
-          color: white;
-          margin: 0 15px;
-          text-decoration: none;
-          font-weight: bold;
-          cursor: pointer;
-        }
-        section {
-          flex-grow: 1;
-          padding: 20px;
-          display: none;
-          overflow-y: auto;
-        }
-        section.active {
-          display: block;
-        }
-       /* Bu footer'ı ekranın en dibine yapıştırır */
+     
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Georgia', serif;
+  background: #fffaf3;
+  color: #2e2e2e;
+  min-height: 100vh;
+}
+
+header {
+  background: #7f5539;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+nav {
+  background: #a47148;
+  padding: 12px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  flex-grow: 1; /* Burayı büyüt */
+  padding: 20px;
+  display: none;
+  overflow-y: auto;
+}
+
+section.active {
+  display: block;
+}
+
+/* Bu footer'ı ekranın en dibine yapıştırır */
 footer {
   position: fixed;
   bottom: 0;
@@ -60,88 +67,73 @@ footer {
   z-index: 1000; /* Üstte kalsın diye */
 }
 
-         
-        }
-        table {
-          width: 100%;
-          border-collapse: collapse;
-          margin-top: 20px;
-        }
-        table, th, td {
-          border: 1px solid #a47148;
-        }
-        th, td {
-          padding: 10px;
-          text-align: left;
-        }
-        h2 {
-          border-bottom: 2px solid #a47148;
-          padding-bottom: 5px;
-        }
-        img.hero {
-          width: 100%;
-          max-height: 300px;
-          object-fit: cover;
-          margin-bottom: 20px;
-          border-radius: 5px;
-        }
-        .info-box {
-          background: #f1e4d4;
-          border-left: 6px solid #a47148;
-          padding: 15px;
-          margin-top: 20px;
-          border-radius: 5px;
-        }
-        .info-section {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-        }
-        .info-div {
-          flex: 1;
-          min-width: 280px;
-          background: #f7f3ee;
-          border: 2px solid #d2b48c;
-          padding: 15px;
-          border-radius: 8px;
-        }
-        .info-div h3 {
-          margin-top: 0;
-          color: #7f5539;
-        }
-        .column-section {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          margin-top: 30px;
-        }
-        /* Yazarlar tablosu */
-        #yazarlar table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        #yazarlar th, #yazarlar td {
-            border: 1px solid #ccc;
-            padding: 12px 15px;
-            text-align: left;
-            vertical-align: middle;
-        }
-        #yazarlar th {
-            background-color: #b71c1c;
-            color: white;
-        }
-        .author-img {
-            vertical-align: middle;
-            margin-right: 12px;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border: 2px solid #b71c1c;
-        }
-        #yazarlar tbody tr:hover {
-            background-color: #f7d6d6;
-        }
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #a47148;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+
+h2 {
+  border-bottom: 2px solid #a47148;
+  padding-bottom: 5px;
+}
+
+img.hero {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.info-box {
+  background: #f1e4d4;
+  border-left: 6px solid #a47148;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info-div {
+  flex: 1;
+  min-width: 280px;
+  background: #f7f3ee;
+  border: 2px solid #d2b48c;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.info-div h3 {
+  margin-top: 0;
+  color: #7f5539;
+}
+
+.column-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
     </style>
 </head>
 <body>
@@ -150,15 +142,18 @@ footer {
         <p>Hazırlayan: Emirhan Ülger</p>
     </header>
     <nav>
-        <a onclick="showPage('anasayfa')">Ana Sayfa</a>
-        <a onclick="showPage('yazarlar')">Yazarlar</a>
-        <a onclick="showPage('eserler')">Eserler</a>
-        <a onclick="showPage('hakkinda')">Edebi Akımlar</a>
+        <a href="#" onclick="showPage('anasayfa')">Ana Sayfa</a>
+        <a href="#" onclick="showPage('yazarlar')">Yazarlar</a>
+        <a href="#" onclick="showPage('eserler')">Eserler</a>
+        <a href="#" onclick="showPage('hakkinda')">Edebi Akımlar</a>
     </nav>
+
+   
+
 
     <section id="anasayfa" class="active">
         <h2>Ana Sayfa</h2>
-        <div class="info-section">
+        <div class="info-section-grid">
           <div class="info-div">
             <h3>Türk Edebiyatına Giriş</h3>
             <p>Türk edebiyatı, Orta Asya'dan günümüze uzanan zengin bir mirasa sahiptir. Hem sözlü hem yazılı kültür içinde büyük gelişmeler yaşanmıştır.</p>
@@ -249,63 +244,313 @@ footer {
                 <td>Roman, Şiir, Deneme</td>
                 <td>Modernizm</td>
             </tr>
+            <tr>
+                <td>
+                    <img src="indir (15).jpeg" alt="Sabahattin Ali" class="author-img">
+                    Sabahattin Ali
+                </td>
+                <td>Cumhuriyet</td>
+                <td>1907 - 1948</td>
+                <td>Şair</td>
+                <td>Realizm</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (6).jpeg" alt="Yaşar Kemal" class="author-img">
+                    Yaşar Kemal
+                </td>
+                <td>Çağdaş</td>
+                <td>1923 - 2015</td>
+                <td>Romancı, Hikayeci</td>
+                <td>Realizm</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (7).jpeg" alt="Ahmet Arif" class="author-img">
+                    Ahmet Arif
+                </td>
+                <td>Çağdaş</td>
+                <td>1927 - 1991</td>
+                <td>Şair</td>
+                <td>Realizm</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (16).jpeg" alt="Orhan Veli Kanık" class="author-img">
+                    Orhan Veli Kanık
+                </td>
+                <td>Cumhuriyet</td>
+                <td>1914 - 1950</td>
+                <td>Şair</td>
+                <td>Garip Akımı</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (9).jpeg" alt="Attila İlhan" class="author-img">
+                    Attila İlhan
+                </td>
+                <td>Çağdaş</td>
+                <td>1925 - 2005</td>
+                <td>Şair, Romancı, Senarist</td>
+                <td>Sosyal Realizm</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (10).jpeg" alt="Ahmet Muhip Dıranas" class="author-img">
+                    Ahmet Muhip Dıranas
+                </td>
+                <td>Servet-i Fünun</td>
+                <td>1909 - 1980</td>
+                <td>Şair, Oyun Yazarı</td>
+                <td>Sembolizm</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (11).jpeg" alt="Fuzuli" class="author-img">
+                    Fuzuli
+                </td>
+                <td>Klasik</td>
+                <td>1494 - 1556</td>
+                <td>Şair</td>
+                <td>Divan Edebiyatı</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (12).jpeg" alt="Yahya Kemal Beyatlı" class="author-img">
+                    Yahya Kemal Beyatlı
+                </td>
+                <td>Servet-i Fünun</td>
+                <td>1884 - 1958</td>
+                <td>Şair, Yazardır</td>
+                <td>Parnasizm</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (13).jpeg" alt="Nazım Hikmet" class="author-img">
+                    Nazım Hikmet
+                </td>
+                <td>Çağdaş</td>
+                <td>1902 - 1963</td>
+                <td>Şair, Oyun Yazarı</td>
+                <td>Füturizm,Realizm</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="indir (14).jpeg" alt="Halit Ziya Uşaklıgil" class="author-img">
+                    Halit Ziya Uşaklıgil
+                </td>
+                <td>Servet-i Fünun</td>
+                <td>1886 - 1945</td>
+                <td>Roman, Hikaye</td>
+                <td>Realizm,Sembolizm</td>
+            </tr>
         </tbody>
     </table>
-    </section>
+</section>
 
-    <section id="eserler">
-        <h2>Önemli Eserler</h2>
-        <div class="info-box">
-            <h3>İnce Memed - Yaşar Kemal</h3>
-            <p>Köy yaşamını, adaletsizliği ve kahramanlık mücadelesini anlatır. Türk edebiyatının önemli romanlarındandır.</p>
-        </div>
-        <div class="info-box">
-            <h3>Çalıkuşu - Reşat Nuri Güntekin</h3>
-            <p>Genç bir öğretmenin Anadolu’daki yaşamını ve aşkını konu alır.</p>
-        </div>
-        <div class="info-box">
-            <h3>Safahat - Mehmet Akif Ersoy</h3>
-            <p>Toplumsal konuları ele alan şiirlerden oluşan büyük bir eser.</p>
-        </div>
-    </section>
+<style>
+    #yazarlar table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    #yazarlar th, #yazarlar td {
+        border: 1px solid #ccc;
+        padding: 12px 15px;
+        text-align: left;
+        vertical-align: middle;
+    }
+    #yazarlar th {
+        background-color: #b71c1c;
+        color: white;
+    }
+    .author-img {
+        vertical-align: middle;
+        margin-right: 12px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border: 2px solid #b71c1c;
+    }
+    #yazarlar tbody tr:hover {
+        background-color: #f7d6d6;
+    }
+</style>
+
+
+   <section id="eserler">
+    <h2>Önemli Türk Eserleri</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Eser</th>
+                <th>Yazar</th>
+                <th>Tür</th>
+                <th>Tema</th>
+                <th>Yıl</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>İntibah</td>
+                <td>Namık Kemal</td>
+                <td>Roman</td>
+                <td>Aşk, toplumsal eleştiri</td>
+                <td>1876</td>
+            </tr>
+            <tr>
+                <td>Sinekli Bakkal</td>
+                <td>Halide Edip Adıvar</td>
+                <td>Roman</td>
+                <td>Toplum, kadın hakları</td>
+                <td>1936</td>
+            </tr>
+            <tr>
+                <td>Safahat</td>
+                <td>Mehmet Akif Ersoy</td>
+                <td>Şiir</td>
+                <td>Millî mücadele, toplum</td>
+                <td>1911-1933</td>
+            </tr>
+            <tr>
+                <td>Benim Adım Kırmızı</td>
+                <td>Orhan Pamuk</td>
+                <td>Roman</td>
+                <td>Aşk, sanat, kimlik</td>
+                <td>1998</td>
+            </tr>
+            <tr>
+                <td>Huzur</td>
+                <td>Ahmet Hamdi Tanpınar</td>
+                <td>Roman</td>
+                <td>Modernleşme, yalnızlık</td>
+                <td>1949</td>
+            </tr>
+            <tr>
+                <td>Çalıkuşu</td>
+                <td>Reşat Nuri Güntekin</td>
+                <td>Roman</td>
+                <td>Aşk, eğitim, Anadolu yaşamı</td>
+                <td>1922</td>
+            </tr>
+            <tr>
+                <td>Kuyucaklı Yusuf</td>
+                <td>Sabahattin Ali</td>
+                <td>Roman</td>
+                <td>Sosyal adaletsizlik, aşk</td>
+                <td>1937</td>
+            </tr>
+            <tr>
+                <td>Dokuzuncu Hariciye Koğuşu</td>
+                <td>Peyami Safa</td>
+                <td>Roman</td>
+                <td>İnsanın iç dünyası, hastalık</td>
+                <td>1930</td>
+            </tr>
+            <tr>
+                <td>Devlet Ana</td>
+                <td>Ömer Seyfettin</td>
+                <td>Öykü</td>
+                <td>Milliyetçilik, kahramanlık</td>
+                <td>1916</td>
+            </tr>
+            <tr>
+                <td>İnce Memed</td>
+                <td>Yaşar Kemal</td>
+                <td>Roman</td>
+                <td>Adalet, köylü yaşamı</td>
+                <td>1955</td>
+            </tr>
+            <tr>
+                <td>Tutunamayanlar</td>
+                <td>Oğuz Atay</td>
+                <td>Roman</td>
+                <td>Birey, toplum, yabancılaşma</td>
+                <td>1971</td>
+            </tr>
+            <tr>
+                <td>Fatih Harbiye</td>
+                <td>Peyami Safa</td>
+                <td>Roman</td>
+                <td>Modernleşme, doğu-batı çatışması</td>
+                <td>1931</td>
+            </tr>
+            <tr>
+                <td>Memleket Hikayeleri</td>
+                <td>Refik Halit Karay</td>
+                <td>Öykü</td>
+                <td>Toplum, Anadolu yaşamı</td>
+                <td>1919</td>
+            </tr>
+            <tr>
+                <td>Yaban</td>
+                <td>Yakup Kadri Karaosmanoğlu</td>
+                <td>Roman</td>
+                <td>Toplum, köy yaşamı</td>
+                <td>1932</td>
+            </tr>
+            <tr>
+                <td>Mai ve Siyah</td>
+                <td>Halit Ziya Uşaklıgil</td>
+                <td>Roman</td>
+                <td>Bireysel bunalım, hayal kırıklığı</td>
+                <td>1896</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
 
     <section id="hakkinda">
-        <h2>Edebi Akımlar</h2>
-        <div class="column-section">
-            <div class="info-box">
-                <h3>Romantizm</h3>
-                <p>Duygulara önem veren, bireyselliği ön plana çıkaran edebi akım.</p>
-            </div>
-            <div class="info-box">
-                <h3>Realizm</h3>
-                <p>Gerçek yaşamı nesnel olarak yansıtmayı amaçlayan akım.</p>
-            </div>
-            <div class="info-box">
-                <h3>Natüralizm</h3>
-                <p>Realizmin bir aşaması olarak insan doğasının bilimsel gözlemlerle anlatılması.</p>
-            </div>
-            <div class="info-box">
-                <h3>Modernizm</h3>
-                <p>Geleneksel biçim ve konuların reddi, yenilikçi anlatım teknikleri.</p>
-            </div>
-            <div class="info-box">
-                <h3>Postmodernizm</h3>
-                <p>Gerçeklik algısının sorgulanması, farklı anlatım biçimleri ve ironi.</p>
-            </div>
+    <h2>Edebi Akımlar</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <div style="flex: 1 1 45%; background: #f7f1e1; padding: 20px; border-radius: 10px; box-shadow: 0 3px 7px rgba(0,0,0,0.12);">
+            <h3>Hümanizm</h3>
+            <p>İnsanı ve insanlık değerlerini yücelten, antik kültür ve bilimsel düşünceyi temel alan akım.</p>
         </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Türk Edebiyatı | Tüm hakları saklıdır.</p>
-    </footer>
+        <div style="flex: 1 1 45%; background: #f7f1e1; padding: 20px; border-radius: 10px; box-shadow: 0 3px 7px rgba(0,0,0,0.12);">
+            <h3>Klasisizm</h3>
+            <p>Düzen, ahenk ve akla önem veren; Antik Yunan-Roma sanatını örnek alan edebi akım.</p>
+        </div>
+        <div style="flex: 1 1 45%; background: #f7f1e1; padding: 20px; border-radius: 10px; box-shadow: 0 3px 7px rgba(0,0,0,0.12);">
+            <h3>Romantizm</h3>
+            <p>Duygu ve hayal gücünü ön planda tutan, bireysel özgürlük ve doğaya vurgu yapan akım.</p>
+        </div>
+        <div style="flex: 1 1 45%; background: #f7f1e1; padding: 20px; border-radius: 10px; box-shadow: 0 3px 7px rgba(0,0,0,0.12);">
+            <h3>Realizm</h3>
+            <p>Gerçek hayatı ve toplumu olduğu gibi, objektif şekilde anlatan akım.</p>
+        </div>
+        <div style="flex: 1 1 45%; background: #f7f1e1; padding: 20px; border-radius: 10px; box-shadow: 0 3px 7px rgba(0,0,0,0.12);">
+            <h3>Naturalizm</h3>
+            <p>Realizmin ileri formu; insanı çevresel ve kalıtsal faktörlerle belirlenen bir varlık olarak görür.</p>
+        </div>
+        <div style="flex: 1 1 45%; background: #f7f1e1; padding: 20px; border-radius: 10px; box-shadow: 0 3px 7px rgba(0,0,0,0.12);">
+            <h3>Parnasizm</h3>
+            <p>Sanat için sanat anlayışıyla biçim ve estetik ön planda olan, kusursuzluk arayan akım.</p>
+        </div>
+        <div style="flex: 1 1 45%; background: #f7f1e1; padding: 20px; border-radius: 10px; box-shadow: 0 3px 7px rgba(0,0,0,0.12);">
+            <h3>Sembolizm</h3>
+            <p>Gerçekliğin arkasındaki anlamları sembollerle anlatan, soyut ve mistik akım.</p>
+        </div>
+        <div style="flex: 1 1 45%; background: #f7f1e1; padding: 20px; border-radius: 10px; box-shadow: 0 3px 7px rgba(0,0,0,0.12);">
+            <h3>Futurizm</h3>
+            <p>Teknoloji, hız ve yeniliği yücelten, geleneklere karşı çıkan modernist akım.</p>
+        </div>
+    </div>
+</section>
+     <footer>
+  <p>© 2025 Türk Edebiyatı | Tüm hakları saklıdır.</p>
+</footer>
 
     <script>
         function showPage(pageId) {
-            document.querySelectorAll('section').forEach(sec => {
-                sec.classList.remove('active');
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
             });
             document.getElementById(pageId).classList.add('active');
         }
     </script>
+    
 </body>
 </html>
