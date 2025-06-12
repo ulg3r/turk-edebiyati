@@ -16,12 +16,25 @@ html, body {
   flex: 1; /* Burası sayfa büyüdükçe genişler, footer aşağıda kalır */
 }
 
+/* Footer sabit aşağıda */
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #222;
   color: white;
   padding: 10px 0;
   text-align: center;
+  z-index: 1000;
 }
+
+/* İçeriğe footer yüksekliği kadar padding ver */
+body {
+  padding-bottom: 50px; /* Footer’ın yüksekliği kadar */
+  margin: 0;
+}
+
 
 body {
   display: flex;
