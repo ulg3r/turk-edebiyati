@@ -5,20 +5,27 @@
     <title>Türk Edebiyatı</title>
     <style>
         html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
-body > *:not(footer) {
-    flex: 1;
+main {
+  flex: 1;
 }
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
 
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -58,13 +65,7 @@ body > *:not(footer) {
         section.active { 
             display: block; 
         }
-        footer { 
-            background: #a45a3f; 
-            color: white; 
-            text-align: center; 
-            padding: 12px 0; 
-            font-weight: 600;
-            box-shadow: 0 -3px 5px rgba(0,0,0,0.2);
+        
         }
 
         /* Ana sayfa grid düzeni */
